@@ -50,3 +50,4 @@ TARGET_VENDOR := Xiaomi
 
 # Official-ify
 BOOTLEGGERS_BUILD_TYPE := Shishufied
+DEVICE_MAINTAINERS := simrat39
