@@ -35,7 +35,6 @@ PRODUCT_NAME := bootleg_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Redmi Note 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -51,3 +50,6 @@ TARGET_VENDOR := Xiaomi
 # Official-ify
 BOOTLEGGERS_BUILD_TYPE := Shishufied
 DEVICE_MAINTAINERS := simrat39
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.product.model 
