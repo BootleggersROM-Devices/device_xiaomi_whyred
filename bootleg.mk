@@ -28,6 +28,9 @@ $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
+# Inherit perf blobs
+$(call inherit-product, vendor/qcom/common/qti-vendor.mk)
+
 PRODUCT_NAME := bootleg_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
