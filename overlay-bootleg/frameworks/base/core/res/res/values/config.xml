@@ -11,4 +11,7 @@
   <!-- Whether device ignores the RSSNR signal implementation -->
   <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
+  <!-- Enable qcom fw boost -->
+  <bool name="config_enableQcCpuBoost">true</bool>
+
 </resources>
