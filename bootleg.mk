@@ -22,11 +22,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from whyred device
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
-# Inherit some common AOSiP stuff.
+# Inherit some common Bootleg stuff.
 $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
+$(call inherit-product, vendor/xiaomi/Gcam/config.mk)
 
 # Inherit perf blobs
 $(call inherit-product, vendor/qcom/common/qti-vendor.mk)
@@ -49,7 +50,9 @@ TARGET_VENDOR := Xiaomi
 
 # Official-ify
 BOOTLEGGERS_BUILD_TYPE := Shishufied
-DEVICE_MAINTAINERS := simrat39
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+   DEVICE_MAINTAINERS="simrat39"
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model 
