@@ -30,7 +30,7 @@ import com.android.internal.hardware.AmbientDisplayConfiguration;
 import static android.provider.Settings.Secure.DOZE_ALWAYS_ON;
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 
-public final class DozeUtils {
+public final class Utils {
 
     private static final String TAG = "DozeUtils";
     private static final boolean DEBUG = false;
@@ -46,7 +46,7 @@ public final class DozeUtils {
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
 
-    public static void startService(Context context) {
+    protected static void startService(Context context) {
         if (DEBUG) Log.d(TAG, "Starting service");
         context.startServiceAsUser(new Intent(context, DozeService.class),
                 UserHandle.CURRENT);
@@ -77,7 +77,7 @@ public final class DozeUtils {
         }
     }
 
-    public static boolean isDozeEnabled(Context context) {
+    protected static boolean isDozeEnabled(Context context) {
         return Settings.Secure.getInt(context.getContentResolver(),
                 DOZE_ENABLED, 1) != 0;
     }
@@ -128,7 +128,7 @@ public final class DozeUtils {
         return isGestureEnabled(context, GESTURE_POCKET_KEY);
     }
 
-    public static boolean sensorsEnabled(Context context) {
+    protected static boolean sensorsEnabled(Context context) {
         return isPickUpEnabled(context) || isHandwaveGestureEnabled(context)
                 || isPocketGestureEnabled(context);
     }
