@@ -27,7 +27,7 @@ $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
-$(call inherit-product, vendor/xiaomi/Gcam/config.mk)
+# $(call inherit-product, vendor/xiaomi/Gcam/config.mk)
 
 # Inherit perf blobs
 $(call inherit-product, vendor/qcom/common/qti-vendor.mk)
